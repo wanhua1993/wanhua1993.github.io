@@ -197,8 +197,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-12-04T01:00:00.068Z" itemprop="datePublished">
-          2016-12-04
+      <time datetime="2016-12-10T14:17:55.295Z" itemprop="datePublished">
+          2016-12-10
       </time>
     
 </span>
@@ -206,22 +206,100 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>你好啊</p>
+      		<h2 id="数组的常用方法"><a href="#数组的常用方法" class="headerlink" title="数组的常用方法"></a>数组的常用方法</h2><blockquote>
+<p>学习数组常用的方法一共有四个维度</p>
+<ul>
+<li>1 方法的作用</li>
+<li>2 需要传递那些参数</li>
+<li>3 是否有返回值、返回值是什么</li>
+<li>4 通过此方法是否对原来的数组产生了改变<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3></li>
+<li>向数组的末尾增加新的内容</li>
+<li>参数: 想向末尾传递那些内容就传递哪些内容</li>
+<li>返回值: 新增后的数组的长度</li>
+<li>原来的数组已经发生改变<br>不使用push向末尾增加内容 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ary[ary.length] = &apos;&apos;</div><div class="line">ary.length - 1</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="pop"><a href="#pop" class="headerlink" title="pop"></a>pop</h3><ul>
+<li>删除数组的最后一项</li>
+<li>没有参数</li>
+<li>原来的数组发生改变</li>
+<li>返回值是返回被删除的那一项<blockquote>
+<p>不使用pop 删除最后一项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ary.length --</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="shift"><a href="#shift" class="headerlink" title="shift"></a>shift</h3><ul>
+<li>删除数组的第一项</li>
+<li>不需要</li>
+<li>返回值是删除的数组项<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift"></a>unshift</h3></li>
+<li>向数组的开头增加一项</li>
+<li>要增加的数组项(a,b)如果是多项 用逗号隔开 </li>
+<li>返回值是 数组的新长度</li>
+<li>原来的数组发生改变<h3 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h3><blockquote>
+<p>既能实现删除 也能实现增加 还能实现修改</p>
+</blockquote>
+</li>
+<li><p>从索引n开始 删除m个元素 把删除的内容以一个新数组的方式 返回原来的数组发生改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ary.splice(n,m)</div></pre></td></tr></table></figure>
+</li>
+<li><p>从索引n开始 删除到数组的末尾 把原来的数组中的每一项都删除掉(清空数组的每一项) 把之前的每一项的值以一个新的数组返回、把之前的数组克隆了一份 一模一样的 这样的克隆会修改原来的数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ary.splice(n)</div><div class="line">ary.splice(0)</div></pre></td></tr></table></figure>
+</li>
+<li><p>从索引n开始，删除m个，用x替换删除的部分，把删除的内容以一个新的数组返回 原来的数组发生改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">splice(n,m,x)</div></pre></td></tr></table></figure>
+</li>
+<li><p>从索引n开始 一个都不删除(返回的结果是一个空数组) 把x增加到索引n的前面 原来的数组发生改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">splice(n,0,x)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="slice"><a href="#slice" class="headerlink" title="slice"></a>slice</h3><ul>
+<li>实现数组的截取 在原来的数组中截取一部分</li>
+<li><p>从索引0开始 找到索引为m处(不包含m)将找到的部分以一个数组返回 原来的数组不变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slice(n,m)</div></pre></td></tr></table></figure>
+</li>
+<li><p>从索引n开始一直找到数组末尾</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slice(n)</div></pre></td></tr></table></figure>
+</li>
+<li><p>把原来的数组克隆了一份 返回值 是新复制的数组 原来的数组不变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">slice(0)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h3><ul>
+<li>把两个数组拼接到一起 原来的数组不变 </li>
+<li>如果是多次 用逗号隔开</li>
+<li>返回值是拼接好的数组</li>
+<li>原来的数组不变<h3 id="把数组转化为字符串"><a href="#把数组转化为字符串" class="headerlink" title="把数组转化为字符串"></a>把数组转化为字符串</h3></li>
+<li>把数组转换为字符串原来的数组不变 (toString)</li>
+<li>按照每一个分割符 把数组汇总的每一项拼接成一个字符串 原来的数组不变 (join)<h3 id="数组的顺序和排列"><a href="#数组的顺序和排列" class="headerlink" title="数组的顺序和排列"></a>数组的顺序和排列</h3></li>
+<li>reverse 把数组到过来排序 原来的数组改变</li>
+<li>sort 给数组进行排序 原来的数组会发生改变 但是只能处理10以内的数字进行排休 因为它是按照UNICODE编码的值进行排序的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ary.sort(function (a,b)&#123;</div><div class="line">    return a - b; 由小到大排序</div><div class="line">&#125;);</div><div class="line">ary.sort(function ()&#123;</div><div class="line">    return b - a; 由大到小排序</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="indexof-lastindexof"><a href="#indexof-lastindexof" class="headerlink" title="indexof lastindexof"></a>indexof lastindexof</h3><ul>
+<li>只有在标准浏览器中兼容的方法、在IE6-8下不兼容</li>
+<li>当前内容在数组中第一次 或 最后一次出现的位置的索引 如果数组中没有这一项 返回的结果是 -1、如果有这一项，索引是几那么就返回几、原来的数组不变</li>
+<li>可以验证当前的内容在数组中是否存在</li>
+</ul>
+<blockquote>
+<p>以上的这些方法是es5中提供的的 还有一些事es6中提供的方法 比如forEach map</p>
+</blockquote>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    
-    <a class="pull-right" href="/2016/12/02/hello-world/">
-        Hello World →
+    <a class="pull-left" href="/2016/12/10/字符串中常用的方法/" style="float: left;">
+        ← 
     </a>
+    
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/12/04/wanhua/" data-title="" data-url="https://wanhua1993.github.io/2016/12/04/wanhua/"></div>
+<div class="ds-thread" data-thread-key="2016/12/10/数组中常用的方法/" data-title="" data-url="https://wanhua1993.github.io/2016/12/10/数组中常用的方法/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
