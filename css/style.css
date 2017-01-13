@@ -144,7 +144,7 @@ a:link {
 	color: #151515;
 	text-decoration: none;
 }
-[class*="col-"] {
+.opening-statement {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border: none;
