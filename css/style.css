@@ -173,6 +173,7 @@ blockquote footer {
 }
 .row {
 	margin-bottom: 0;
+	height:100px;
 }
 .container {
   padding-right: 20px;
