@@ -167,6 +167,11 @@ a:link {
     padding-top: 15px;
     padding-bottom: 15px;
     border: none;
+}
+.opening-statement {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
     background-color: #93a1a1;
 }
 
