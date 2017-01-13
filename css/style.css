@@ -839,9 +839,9 @@ span.sb-caret { /* Caret Down */
 	font-weight: 400;
 }
 @media (max-width:991px) {
-	.title-emphasis {
+	/*.title-emphasis {
 		text-align: left;
-	}
+	}*/
 }
 
 /* *******************************************************
@@ -1241,9 +1241,9 @@ span.sb-caret { /* Caret Down */
 	position: relative;
 }
 @media (max-width:991px) {
-	#blog-post a.readmore {
+	/*#blog-post a.readmore {
 		padding: 40px;
-	}
+	}*/
 }
 @media (max-width:767px) {
 	#blog-post a.readmore {
