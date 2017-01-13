@@ -2378,7 +2378,7 @@ ul.page-nav i {
 }
 @media (min-width: 992px) {
   #sidebar.affix-top {
-    /*position: relative;*/
+    position: relative;
     margin-top: -47px;
     width:228px;
   }
