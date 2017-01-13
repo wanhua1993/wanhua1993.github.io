@@ -163,18 +163,18 @@ a:link {
     text-decoration: none;
 }
 
-[class*="col-"] {
+/*[class*="col-"] {
     padding-top: 15px;
     padding-bottom: 15px;
     border: none;
-}
+}*/
 
-/*.opening-statement {
+.opening-statement {
     padding-top: 15px;
     padding-bottom: 15px;
     border: none;
     background-color: #93a1a1;
-}*/
+}
 
 /* Responsive tables fix for Firefox */
 @-moz-document url-prefix() {
@@ -206,7 +206,7 @@ blockquote footer {
 
 .row {
     margin-bottom: 0;
-    height: 100px;
+    /*height: 100px;*/
 }
 
 .container {
