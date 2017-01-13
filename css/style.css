@@ -148,6 +148,7 @@ a:link {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border: none;
+	background-color: #93a1a1;
 }
 /* Responsive tables fix for Firefox */
 @-moz-document url-prefix() {
@@ -172,7 +173,6 @@ blockquote footer {
 }
 .row {
 	margin-bottom: 0;
-	background-color: #7c7c7c;
 }
 .container {
   padding-right: 20px;
