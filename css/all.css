@@ -638,7 +638,7 @@ a.custom-button span {
 	display: block;
 	padding:0px 10px;
 	margin:23px 0px;
-	color: #fff;
+	color: #00B0E8;
 	font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -650,7 +650,7 @@ a.custom-button span {
 }
 .navbar .nav li.nolink {
 	font-family: 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-	color: #151515;
+	color: #00B0E8;
 	font-weight: 400;
 	text-shadow: none;
 	letter-spacing: 1px;
@@ -660,7 +660,6 @@ a.custom-button span {
 	margin:23px 0px;
 	border-right:1px solid #aaa;
 	padding: 0px 10px;
-	color: #fff;
 }
 nav i.icon-basic-eye {
 	font-size: 20px;
