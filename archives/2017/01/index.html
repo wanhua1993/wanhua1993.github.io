@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>MagicDarker</title>
+  <title>Archives: 2017/1 | MagicDarker</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -191,102 +191,126 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2016-12-14T03:16:05.721Z" itemprop="datePublished">
-          2016-12-14
-      </time>
-    
-</span>
-                <h1></h1>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg-pic.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
             </div>
+            <!-- // .col-md-12 -->
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h2 id="对于开发者来说"><a href="#对于开发者来说" class="headerlink" title="对于开发者来说"></a>对于开发者来说</h2><ol>
-<li>样式置顶，脚本置底<br>样式文件的引用<code>&lt;link /&gt;</code>放在html文档的head标签中，脚本文件的引用<code>&lt;script&gt;</code> 放在body的底部；另外尽量减少在页面中出现片段性（内联）的style和script代码。</li>
-<li>精简资源<br>   压缩、合并CSS，JS文件<br>   对图片文件进行精简优化，方式如：<pre><code>- OptiPNG工具无损优化PNG图片；
-- 使用webp格式；
-</code></pre></li>
-<li>减少http请求次数 <ul>
-<li>合并css、js文件；</li>
-<li>使用css sprites技术；</li>
-<li>icon图片过多的情况下，考虑使用iconfont技术；</li>
-</ul>
-</li>
-<li>延迟加载<ul>
-<li>使用reauire.js或sea.js按需加载js模块；</li>
-<li>使用lazyload.js插件延迟加载图片；  </li>
-</ul>
-</li>
-<li>删除重复脚本<ul>
-<li>重复脚本的问题一般出现在规范稀松的团队或者多部门协作开发的团队中，尽量减少这类问题的出现；重复脚本一般在开发时即可发现，因为大多数情况下这会导致变量覆盖（如多次引用jQuery），功能无法正常使用。     </li>
-</ul>
-</li>
-<li>缓存Ajax<ul>
-<li>最快的Ajax请求就是没有请求。   </li>
-</ul>
-</li>
-<li>尽量避免重绘(Repaint)和重排(Reflow)的发生<br>以下情况都会发生：<pre><code>- 添加或删除可见的DOM元素；
-- 元素位置改变；
-- 元素尺寸改变（包括：外边距，内边距，边框厚度、宽度、高度等）；
-</code></pre>内容改变；<pre><code>- 页面渲染器初始化；
-- 浏览器窗口尺寸变化。
-- 重排和重绘不可避免，只能尽量少的发生。      
-</code></pre></li>
-<li>对缓存做相应的优化<pre><code>通过localstorage存储js、css资源；
-资源版本控制；
-只要你愿意，localstorage也可以控制缓存时间！通过写一小段js代码来实现；
-在活动期间可以提前将活动相关资源缓存至localstorage，减轻活动当日的CDN消耗，同时在提升用户访问速度的同时，降低服务器端压力。
-</code></pre><h2 id="客户端性能"><a href="#客户端性能" class="headerlink" title="客户端性能"></a>客户端性能</h2></li>
-</ol>
-<ul>
-<li>代理webview发送ajax请求，据说这可以省去三次握手的时间？</li>
-<li>iOS中使用WKWebView代替UIWebview，UIWebview是iOS8.0以前的产物，针对iOS8.0以后的系统建议使用WKWebView，经过实际测试，性能大概能够提升40%，同时稳定性有很大程度的提升，几乎是质的提升。</li>
-<li>webview支持加载webp格式图片。</li>
-<li>静态资源预加载，除了localstorage的缓存机制，我们也可以利用客户端针对前端静态资源进行缓存，在WIFI环境下，我们可以预先将静态资源下载至本地。<h2 id="服务端性能"><a href="#服务端性能" class="headerlink" title="服务端性能"></a>服务端性能</h2></li>
-<li>服务器端渲染</li>
-<li>一个快速响应的接口      </li>
-<li>图片转webp格式 </li>
-</ul>
-
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2016/12/14/Promise－－优雅解决回调嵌套/" style="float: left;">
-        ← 
-    </a>
-    
-    
-    <a class="pull-right" href="/2016/12/10/字符串中常用的方法/">
-         →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/12/14/前端性能优化的问题/" data-title="" data-url="https://wanhua1993.github.io/2016/12/14/前端性能优化的问题/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"duoshuo_name"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
+        <div class="herofade beige-dk"></div>
     </div>
 </section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/1/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:06:27.357Z"><a href="/2017/01/13/1/">2017-01-13</a></time></p>
+                        </div>
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/gulp构建前端自动化/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:05:26.876Z"><a href="/2017/01/13/gulp构建前端自动化/">2017-01-13</a></time></p>
+                        </div>
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/webpack的实践笔记/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:05:26.876Z"><a href="/2017/01/13/webpack的实践笔记/">2017-01-13</a></time></p>
+                        </div>
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/字符串中常用的方法/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:05:26.876Z"><a href="/2017/01/13/字符串中常用的方法/">2017-01-13</a></time></p>
+                        </div>
+                    
+                        
+                            </div><div class="row boxes">
+                            
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/数组中常用的方法/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:05:26.876Z"><a href="/2017/01/13/数组中常用的方法/">2017-01-13</a></time></p>
+                        </div>
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/前端性能优化的问题/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:05:26.876Z"><a href="/2017/01/13/前端性能优化的问题/">2017-01-13</a></time></p>
+                        </div>
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2017/01/13/Promise－－优雅解决回调嵌套/"></a></h4>
+                            
+                            <p><time datetime="2017-01-13T02:05:26.876Z"><a href="/2017/01/13/Promise－－优雅解决回调嵌套/">2017-01-13</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>心有猛虎，则细嗅蔷薇 ; 内心的理想和外部的现实，温情而激烈，但也不能打破我最真实的心灵状态，生气盎然，驻步察望，猛虎呼啸！</p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 
