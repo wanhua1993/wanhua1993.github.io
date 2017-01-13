@@ -261,7 +261,7 @@ Async函数async主要实现了三个部分的流程控制功能：
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/01/13/webpack的实践笔记/"></a></h3>
+                    <h3><a href="/2017/01/13/Promise－－优雅解决回调嵌套/"></a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-01-13T02:05:26.876Z" itemprop="datePublished">
@@ -274,13 +274,18 @@ Async函数async主要实现了三个部分的流程控制功能：
                 <div class="col-md-8">
                     <p>
                       
-                        webpack的实践入门笔记全局安装 webpack1npm install webpack -g
-创建index.html文件12345678910&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;webpack-practice&lt;/
+                        Promise状态的理解用new Promise实例化的Promise对象有三个状态：
+
+“has-resolution” - Fulfilled
+reslove(成功时)，调用onFulfilled
+“has-rejection” - Rejected
+reject(失败时)。调用Rejected
+“unresolve” - Pending既不是resolve也不是reject状态，也就是Promise刚刚被创建后的初始化状态。not
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/01/13/webpack的实践笔记/">前进呀...</a>
+                        <a href="/2017/01/13/Promise－－优雅解决回调嵌套/">前进呀...</a>
                     </p>
                     
                 </div>
@@ -325,7 +330,7 @@ Node是一个基于Google V8引擎建立的一个解释器检测Node是否已经
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/01/13/数组中常用的方法/"></a></h3>
+                    <h3><a href="/2017/01/13/webpack的实践笔记/"></a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-01-13T02:05:26.876Z" itemprop="datePublished">
@@ -338,27 +343,13 @@ Node是一个基于Google V8引擎建立的一个解释器检测Node是否已经
                 <div class="col-md-8">
                     <p>
                       
-                        数组的常用方法
-学习数组常用的方法一共有四个维度
-
-1 方法的作用
-2 需要传递那些参数
-3 是否有返回值、返回值是什么
-4 通过此方法是否对原来的数组产生了改变push
-向数组的末尾增加新的内容
-参数: 想向末尾传递那些内容就传递哪些内容
-返回值: 新增后的数组的长度
-原来的数组已经发生改变不使用push向末尾增加内容 12ary[ary.length] = &apos;&apos;ary.length - 1
-
-
-
-pop
-删除数组
+                        webpack的实践入门笔记全局安装 webpack1npm install webpack -g
+创建index.html文件12345678910&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;webpack-practice&lt;/
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/01/13/数组中常用的方法/">前进呀...</a>
+                        <a href="/2017/01/13/webpack的实践笔记/">前进呀...</a>
                     </p>
                     
                 </div>
@@ -438,7 +429,7 @@ substring()是最常用到的字符串截取方法，它可以接收两个参数
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2017/01/13/Promise－－优雅解决回调嵌套/"></a></h3>
+                    <h3><a href="/2017/01/13/数组中常用的方法/"></a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2017-01-13T02:05:26.876Z" itemprop="datePublished">
@@ -451,18 +442,27 @@ substring()是最常用到的字符串截取方法，它可以接收两个参数
                 <div class="col-md-8">
                     <p>
                       
-                        Promise状态的理解用new Promise实例化的Promise对象有三个状态：
+                        数组的常用方法
+学习数组常用的方法一共有四个维度
 
-“has-resolution” - Fulfilled
-reslove(成功时)，调用onFulfilled
-“has-rejection” - Rejected
-reject(失败时)。调用Rejected
-“unresolve” - Pending既不是resolve也不是reject状态，也就是Promise刚刚被创建后的初始化状态。not
+1 方法的作用
+2 需要传递那些参数
+3 是否有返回值、返回值是什么
+4 通过此方法是否对原来的数组产生了改变push
+向数组的末尾增加新的内容
+参数: 想向末尾传递那些内容就传递哪些内容
+返回值: 新增后的数组的长度
+原来的数组已经发生改变不使用push向末尾增加内容 12ary[ary.length] = &apos;&apos;ary.length - 1
+
+
+
+pop
+删除数组
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2017/01/13/Promise－－优雅解决回调嵌套/">前进呀...</a>
+                        <a href="/2017/01/13/数组中常用的方法/">前进呀...</a>
                     </p>
                     
                 </div>
