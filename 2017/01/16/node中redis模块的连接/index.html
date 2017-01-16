@@ -197,8 +197,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-01-13T02:05:26.876Z" itemprop="datePublished">
-          2017-01-13
+      <time datetime="2017-01-16T03:13:22.250Z" itemprop="datePublished">
+          2017-01-16
       </time>
     
 </span>
@@ -206,71 +206,33 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="对于开发者来说"><a href="#对于开发者来说" class="headerlink" title="对于开发者来说"></a>对于开发者来说</h2><ol>
-<li>样式置顶，脚本置底<br>样式文件的引用<code>&lt;link /&gt;</code>放在html文档的head标签中，脚本文件的引用<code>&lt;script&gt;</code> 放在body的底部；另外尽量减少在页面中出现片段性（内联）的style和script代码。</li>
-<li>精简资源<br>   压缩、合并CSS，JS文件<br>   对图片文件进行精简优化，方式如：<pre><code>- OptiPNG工具无损优化PNG图片；
-- 使用webp格式；
-</code></pre></li>
-<li>减少http请求次数 <ul>
-<li>合并css、js文件；</li>
-<li>使用css sprites技术；</li>
-<li>icon图片过多的情况下，考虑使用iconfont技术；</li>
-</ul>
-</li>
-<li>延迟加载<ul>
-<li>使用reauire.js或sea.js按需加载js模块；</li>
-<li>使用lazyload.js插件延迟加载图片；  </li>
-</ul>
-</li>
-<li>删除重复脚本<ul>
-<li>重复脚本的问题一般出现在规范稀松的团队或者多部门协作开发的团队中，尽量减少这类问题的出现；重复脚本一般在开发时即可发现，因为大多数情况下这会导致变量覆盖（如多次引用jQuery），功能无法正常使用。     </li>
-</ul>
-</li>
-<li>缓存Ajax<ul>
-<li>最快的Ajax请求就是没有请求。   </li>
-</ul>
-</li>
-<li>尽量避免重绘(Repaint)和重排(Reflow)的发生<br>以下情况都会发生：<pre><code>- 添加或删除可见的DOM元素；
-- 元素位置改变；
-- 元素尺寸改变（包括：外边距，内边距，边框厚度、宽度、高度等）；
-</code></pre>内容改变；<pre><code>- 页面渲染器初始化；
-- 浏览器窗口尺寸变化。
-- 重排和重绘不可避免，只能尽量少的发生。      
-</code></pre></li>
-<li>对缓存做相应的优化<pre><code>通过localstorage存储js、css资源；
-资源版本控制；
-只要你愿意，localstorage也可以控制缓存时间！通过写一小段js代码来实现；
-在活动期间可以提前将活动相关资源缓存至localstorage，减轻活动当日的CDN消耗，同时在提升用户访问速度的同时，降低服务器端压力。
-</code></pre><h2 id="客户端性能"><a href="#客户端性能" class="headerlink" title="客户端性能"></a>客户端性能</h2></li>
-</ol>
+      		<h2 id="node连接redis数据库简单封装-redis模块"><a href="#node连接redis数据库简单封装-redis模块" class="headerlink" title="node连接redis数据库简单封装-redis模块"></a>node连接redis数据库简单封装-redis模块</h2><p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、key-value数据库，并提供多种语言的API。</p>
+<p>当 Redis 工作于持久化模式时，可以将它当作一个非关系型数据库使用。而工作于内存中时，则可以用作数据的高速缓存。</p>
+<p>在node.js中使用redis来缓存数据；</p>
+<h3 id="Redis-值数据结构类型"><a href="#Redis-值数据结构类型" class="headerlink" title="Redis 值数据结构类型"></a>Redis 值数据结构类型</h3><p>Redis 内建的值数据结构有如下类型：</p>
 <ul>
-<li>代理webview发送ajax请求，据说这可以省去三次握手的时间？</li>
-<li>iOS中使用WKWebView代替UIWebview，UIWebview是iOS8.0以前的产物，针对iOS8.0以后的系统建议使用WKWebView，经过实际测试，性能大概能够提升40%，同时稳定性有很大程度的提升，几乎是质的提升。</li>
-<li>webview支持加载webp格式图片。</li>
-<li>静态资源预加载，除了localstorage的缓存机制，我们也可以利用客户端针对前端静态资源进行缓存，在WIFI环境下，我们可以预先将静态资源下载至本地。<h2 id="服务端性能"><a href="#服务端性能" class="headerlink" title="服务端性能"></a>服务端性能</h2></li>
-<li>服务器端渲染</li>
-<li>一个快速响应的接口      </li>
-<li>图片转webp格式 </li>
+<li>字符串（Strings）<br>字符串是最基本也是最简单的值元素类型，普通的键值存储都可以归为此类。字符串类型的值如果是数字，还可以做一些数值运算，例如 incr 操作和 decr 操作对数值的原子增减。字符串类型还允许存储二进制数据，比如图片。</li>
+<li>哈希（Hashes）<br>存储比较复杂数据结构时使用。Redis 的哈希结构其实就是一个哈希表（hashmap），它允许在一个哈希中存储一个或多个键值映射，同时提供获取，修改，删除哈希表其中一个字段或者全部字段的方法。通常，我们可以将 JSON 结构的数据类型存储于哈希中。</li>
+<li>线性列表（Lists）<br>常用的线性队列，实现方式是一个双向链表，它提供了列表头尾添加/删除，索引访问/添加/删除，获取队列长度等操作。可以用来实现消息队列，任务列表以及排行等功能。访问队列两端的元素是非常快的，但如果您试着访问一个非常大的列表的中间元素仍然是十分慢的，列表操作的时间复杂度为 O(N)。</li>
+<li>集合（Sets）<br>集合对外提供的功能与线性列表类似是一个列表的功能，特殊之处在于集合是可以自动排重的，当您需要存储一个列表数据，又不希望出现重复数据时，集合是一个很好的选择，并且集合提供了判断某个成员是否在一个集合内的重要接口，这个也是列表所不能提供的。同时，Redis 还为集合提供了求交集、并集、差集等操作，非常方便、实用。集合是无序存储的，所有关于集合的增删改查操作都是常量 O(1) 时间复杂度。</li>
+<li>有序集合（Sorted Sets）<br>有序集合与普通集合非常相似，是一个没有重复元素的字符串集合。不同之处是有序集合的没有成员都关联了一个评分，这个评分被用来按照从最低分到最高分的方式排序集合中的成员。集合的成员是唯一的，但是评分可以是重复的。使用有序集合您可以以非常快的速度（O(log(N))）添加，删除和更新元素。 您也可以很快的根据评分（score）或者次序（position）来获取一个范围的元素。访问有序集合的中间元素也是非常快的, 因此您能够使用有序集合作为一个没有重复成员的智能列表。在有序集合中，您可以很快捷的访问一切您需要的东西：有序的元素，快速的存在性测试，快速访问集合的中间元素。</li>
 </ul>
-
+<h3 id="1、以String类型的数据为例-主要是设置和获取值-进行代码封装"><a href="#1、以String类型的数据为例-主要是设置和获取值-进行代码封装" class="headerlink" title="1、以String类型的数据为例.主要是设置和获取值. 进行代码封装"></a>1、以String类型的数据为例.主要是设置和获取值. 进行代码封装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">var db = &#123;&#125;;  </div><div class="line">var redis = require(&quot;redis&quot;);  </div><div class="line">var client = redis.createClient();  </div><div class="line">  </div><div class="line">client.on(&quot;error&quot;, function (err) &#123;  </div><div class="line">  console.log(&quot;Error :&quot; , err);  </div><div class="line">&#125;);  </div><div class="line">  </div><div class="line">client.on(&apos;connect&apos;, function()&#123;  </div><div class="line">  console.log(&apos;Redis连接成功.&apos;);  </div><div class="line">&#125;)  </div><div class="line">  </div><div class="line">/** </div><div class="line"> * 添加string类型的数据 </div><div class="line"> * @param key 键 </div><div class="line"> * @params value 值  </div><div class="line"> * @params expire (过期时间,单位秒;可为空，为空表示不过期) </div><div class="line"> * @param callBack(err,result) </div><div class="line"> */  </div><div class="line">db.set = function(key, value, expire, callback)&#123;  </div><div class="line">  </div><div class="line">    client.set(key, value, function(err, result)&#123;  </div><div class="line">  </div><div class="line">        if (err) &#123;  </div><div class="line">            console.log(err);  </div><div class="line">            callback(err,null);  </div><div class="line">            return;  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">        if (!isNaN(expire) &amp;&amp; expire &gt; 0) &#123;  </div><div class="line">            client.expire(key, parseInt(expire));  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">        callback(null,result)  </div><div class="line">    &#125;)  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">/** </div><div class="line"> * 查询string类型的数据 </div><div class="line"> * @param key 键 </div><div class="line"> * @param callBack(err,result) </div><div class="line"> */  </div><div class="line">db.get = function(key, callback)&#123;  </div><div class="line">  </div><div class="line">    client.get(key, function(err,result)&#123;  </div><div class="line">  </div><div class="line">        if (err) &#123;  </div><div class="line">            console.log(err);  </div><div class="line">            callback(err,null)  </div><div class="line">            return;  </div><div class="line">        &#125;  </div><div class="line">  </div><div class="line">        callback(null,result);  </div><div class="line">    &#125;);  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">module.exports = db;</div></pre></td></tr></table></figure>
+<h3 id="2、使用"><a href="#2、使用" class="headerlink" title="2、使用"></a>2、使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var db = require(&apos;./redis&apos;);  </div><div class="line">    //设置值  </div><div class="line">    db.set(&apos;test2&apos;, &apos;封装方法&apos;, &apos;100&apos;, function(err,result)&#123;  </div><div class="line">        if (err) &#123;  </div><div class="line">            console.log(err);  </div><div class="line">            return;  </div><div class="line">        &#125;  </div><div class="line">    console.log(&apos;插入数据结果:&apos;, result);  </div><div class="line">    &#125;)  </div><div class="line">    //获取值  </div><div class="line">    db.get(&apos;test2&apos;, function(err,result)&#123;  </div><div class="line">        if (err) &#123;  </div><div class="line">            console.log(err);  </div><div class="line">            return;  </div><div class="line">        &#125;  </div><div class="line">        console.log(result);  </div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/01/13/数组中常用的方法/" style="float: left;">
-        ← 
-    </a>
     
-    
-    <a class="pull-right" href="/2017/01/13/webpack的实践笔记/">
+    <a class="pull-right" href="/2017/01/13/node.js中解决回调地狱 (async模块)/">
          →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2017/01/13/前端性能优化的问题/" data-title="" data-url="https://wanhua1993.github.io/2017/01/13/前端性能优化的问题/"></div>
+<div class="ds-thread" data-thread-key="2017/01/16/node中redis模块的连接/" data-title="" data-url="https://wanhua1993.github.io/2017/01/16/node中redis模块的连接/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"wanhua1993"};
 (function() {
